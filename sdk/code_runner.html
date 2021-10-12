@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="highlight/styles/default.min.css">
+  <script src="highlight/highlight.min.js"></script>
+  <script type="text/javascript">
+    window.addEventListener("message", function( event ) {
+        var data = JSON.parse(event.data);
+        
+        if(data){
+          var  element = document.getElementById('code')
+          element.innerHTML = data.code
+          element.className= "language-"+data.language;
+          hljs.highlightAll();
+        }
+    }, false);
+    
+  </script>  
+</head>
+<body>
+  <div>
+    <pre >
+      <code id="code"></code>
+    </pre>
+  </div>
+  <script></script>
+</body>
+</html>

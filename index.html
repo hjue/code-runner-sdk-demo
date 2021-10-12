@@ -1,0 +1,24 @@
+<html>
+  <body>
+    <h3 >通过sdk方式实现代码高亮</h3>
+
+    
+    <div id="my-code" data-language="python">
+  def check_exam(arr1,arr2):
+
+    c = 0
+    for i,v in enumerate(arr1):
+      if arr2[i] == '':
+        pass
+      elif arr2[i] == v:
+        c += 4
+      else:
+        c += -1
+    if c < 0 :
+      c = 0
+    return c
+    </div>
+
+    <script src="sdk/sdk.js" data-element-id="my-code"></script>
+  </body>
+</html>
